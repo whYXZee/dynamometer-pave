@@ -1,0 +1,57 @@
+[
+   {
+      "directory" : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode\" -I\"C:/ti/C2000Ware_26_01_00_00/libraries/calibration/hrpwm/f28004x/include\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/headers/include/\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/common/include/\" -I\"C:/ti/ccs2101/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -DCPU1 -xc",
+      "file"      : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/afe031_config.c"
+   },
+   {
+      "directory" : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode\" -I\"C:/ti/C2000Ware_26_01_00_00/libraries/calibration/hrpwm/f28004x/include\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/headers/include/\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/common/include/\" -I\"C:/ti/ccs2101/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -DCPU1 -xc",
+      "file"      : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/boostxl_afe031_f28004x_pwmmode_main.c"
+   },
+   {
+      "directory" : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode\" -I\"C:/ti/C2000Ware_26_01_00_00/libraries/calibration/hrpwm/f28004x/include\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/headers/include/\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/common/include/\" -I\"C:/ti/ccs2101/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -DCPU1",
+      "file"      : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/f28004x_codestartbranch.asm"
+   },
+   {
+      "directory" : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode\" -I\"C:/ti/C2000Ware_26_01_00_00/libraries/calibration/hrpwm/f28004x/include\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/headers/include/\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/common/include/\" -I\"C:/ti/ccs2101/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -DCPU1 -xc",
+      "file"      : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/f28004x_defaultisr.c"
+   },
+   {
+      "directory" : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode\" -I\"C:/ti/C2000Ware_26_01_00_00/libraries/calibration/hrpwm/f28004x/include\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/headers/include/\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/common/include/\" -I\"C:/ti/ccs2101/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -DCPU1 -xc",
+      "file"      : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/f28004x_globalvariabledefs.c"
+   },
+   {
+      "directory" : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode\" -I\"C:/ti/C2000Ware_26_01_00_00/libraries/calibration/hrpwm/f28004x/include\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/headers/include/\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/common/include/\" -I\"C:/ti/ccs2101/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -DCPU1 -xc",
+      "file"      : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/f28004x_gpio.c"
+   },
+   {
+      "directory" : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode\" -I\"C:/ti/C2000Ware_26_01_00_00/libraries/calibration/hrpwm/f28004x/include\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/headers/include/\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/common/include/\" -I\"C:/ti/ccs2101/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -DCPU1 -xc",
+      "file"      : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/f28004x_piectrl.c"
+   },
+   {
+      "directory" : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode\" -I\"C:/ti/C2000Ware_26_01_00_00/libraries/calibration/hrpwm/f28004x/include\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/headers/include/\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/common/include/\" -I\"C:/ti/ccs2101/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -DCPU1 -xc",
+      "file"      : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/f28004x_pievect.c"
+   },
+   {
+      "directory" : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode\" -I\"C:/ti/C2000Ware_26_01_00_00/libraries/calibration/hrpwm/f28004x/include\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/headers/include/\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/common/include/\" -I\"C:/ti/ccs2101/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -DCPU1 -xc",
+      "file"      : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/f28004x_sysctrl.c"
+   },
+   {
+      "directory" : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode\" -I\"C:/ti/C2000Ware_26_01_00_00/libraries/calibration/hrpwm/f28004x/include\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/headers/include/\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/common/include/\" -I\"C:/ti/ccs2101/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -DCPU1",
+      "file"      : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/f28004x_usdelay.asm"
+   },
+   {
+      "directory" : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode\" -I\"C:/ti/C2000Ware_26_01_00_00/libraries/calibration/hrpwm/f28004x/include\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/headers/include/\" -I\"C:/ti/C2000Ware_26_01_00_00/device_support/f28004x/common/include/\" -I\"C:/ti/ccs2101/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -DCPU1 -xc",
+      "file"      : "C:/Users/Daniel/workspace_ccstheia/boostxl_afe031_f28004x_pwmmode/hal_spi.c"
+   }
+]
