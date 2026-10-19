@@ -6,13 +6,14 @@ MEMORY
    ADCA                       : origin = 0x00007400, length = 0x00000080
    ADCB                       : origin = 0x00007480, length = 0x00000080
    ADCC                       : origin = 0x00007500, length = 0x00000080
+   ADCD                       : origin = 0x00007580, length = 0x00000080
    ADCARESULT                 : origin = 0x00000B00, length = 0x00000018
    ADCBRESULT                 : origin = 0x00000B20, length = 0x00000018
    ADCCRESULT                 : origin = 0x00000B40, length = 0x00000018
-   ANALOGSUBSYS               : origin = 0x0005D700, length = 0x00000090
+   ADCDRESULT                 : origin = 0x00000B60, length = 0x00000018
+   ANALOGSUBSYS               : origin = 0x0005D180, length = 0x00000048
    CANA                       : origin = 0x00048000, length = 0x00000200
    CANB                       : origin = 0x0004A000, length = 0x00000200
-   CLAPROMCRC0                : origin = 0x000061C0, length = 0x00000020
    CLA1                       : origin = 0x00001400, length = 0x00000080
    CLB1DATAEXCH               : origin = 0x00003200, length = 0x00000200
    CLB2DATAEXCH               : origin = 0x00003600, length = 0x00000200
@@ -27,7 +28,7 @@ MEMORY
    CLB3LOGICCTRL              : origin = 0x00003900, length = 0x00000040
    CLB4LOGICCTRL              : origin = 0x00003D00, length = 0x00000040
    CLBXBAR                    : origin = 0x00007A40, length = 0x00000040
-   CLKCFG                     : origin = 0x0005D200, length = 0x00000036
+   CLKCFG                     : origin = 0x0005D200, length = 0x00000032
    CMPSS1                     : origin = 0x00005C80, length = 0x00000020
    CMPSS2                     : origin = 0x00005CA0, length = 0x00000020
    CMPSS3                     : origin = 0x00005CC0, length = 0x00000020
@@ -35,28 +36,30 @@ MEMORY
    CMPSS5                     : origin = 0x00005D00, length = 0x00000020
    CMPSS6                     : origin = 0x00005D20, length = 0x00000020
    CMPSS7                     : origin = 0x00005D40, length = 0x00000020
+   CMPSS8                     : origin = 0x00005D60, length = 0x00000020
    CPUTIMER0                  : origin = 0x00000C00, length = 0x00000008
    CPUTIMER1                  : origin = 0x00000C08, length = 0x00000008
    CPUTIMER2                  : origin = 0x00000C10, length = 0x00000008
    CPUSYS                     : origin = 0x0005D300, length = 0x00000082
    DACA                       : origin = 0x00005C00, length = 0x00000008
    DACB                       : origin = 0x00005C10, length = 0x00000008
-   DCC0                       : origin = 0x0005E700, length = 0x0000002C
-   DCSMBANK0Z1                : origin = 0x0005F000, length = 0x00000024
-   DCSMBANK0Z2                : origin = 0x0005F040, length = 0x00000024
-   DCSMBANK1Z1                : origin = 0x0005F100, length = 0x00000024
-   DCSMBANK1Z2                : origin = 0x0005F140, length = 0x00000024
-   DCSMCOMMON                 : origin = 0x0005F070, length = 0x00000010
-   DEVCFG                     : origin = 0x0005D000, length = 0x00000180
+   DACC                       : origin = 0x00005C20, length = 0x00000008
+   DCSMCOMMON                 : origin = 0x0005F070, length = 0x00000008
+   DCSMZ1                     : origin = 0x0005F000, length = 0x00000024
+   DCSMZ2                     : origin = 0x0005F040, length = 0x00000024
+   DEVCFG                     : origin = 0x0005D000, length = 0x0000012E
    DMACLASRCSEL               : origin = 0x00007980, length = 0x0000001A
    DMA                        : origin = 0x00001000, length = 0x00000200
-   ECAP1                      : origin = 0x00005200, length = 0x0000001E
-   ECAP2                      : origin = 0x00005240, length = 0x0000001E
-   ECAP3                      : origin = 0x00005280, length = 0x0000001E
-   ECAP4                      : origin = 0x000052C0, length = 0x0000001E
-   ECAP5                      : origin = 0x00005300, length = 0x0000001E
-   ECAP6                      : origin = 0x00005340, length = 0x0000001E
-   ECAP7                      : origin = 0x00005380, length = 0x0000001E
+   ECAP1                      : origin = 0x00005000, length = 0x00000020
+   ECAP2                      : origin = 0x00005020, length = 0x00000020
+   ECAP3                      : origin = 0x00005040, length = 0x00000020
+   ECAP4                      : origin = 0x00005060, length = 0x00000020
+   ECAP5                      : origin = 0x00005080, length = 0x00000020
+   ECAP6                      : origin = 0x000050A0, length = 0x00000020
+   EMIF1CONFIG                : origin = 0x0005F480, length = 0x00000020
+   EMIF2CONFIG                : origin = 0x0005F4A0, length = 0x00000020
+   EMIF1                      : origin = 0x00047000, length = 0x00000070
+   EMIF2                      : origin = 0x00047800, length = 0x00000070
    EPWM1                      : origin = 0x00004000, length = 0x00000100
    EPWM2                      : origin = 0x00004100, length = 0x00000100
    EPWM3                      : origin = 0x00004200, length = 0x00000100
@@ -65,58 +68,48 @@ MEMORY
    EPWM6                      : origin = 0x00004500, length = 0x00000100
    EPWM7                      : origin = 0x00004600, length = 0x00000100
    EPWM8                      : origin = 0x00004700, length = 0x00000100
+   EPWM9                      : origin = 0x00004800, length = 0x00000100
+   EPWM10                     : origin = 0x00004900, length = 0x00000100
+   EPWM11                     : origin = 0x00004A00, length = 0x00000100
+   EPWM12                     : origin = 0x00004B00, length = 0x00000100
    EPWMXBAR                   : origin = 0x00007A00, length = 0x00000040
-   EQEP1                      : origin = 0x00005100, length = 0x00000040
-   EQEP2                      : origin = 0x00005140, length = 0x00000040
-   ERADCOUNTER1               : origin = 0x0005E980, length = 0x00000010
-   ERADCOUNTER2               : origin = 0x0005E990, length = 0x00000010
-   ERADCOUNTER3               : origin = 0x0005E9A0, length = 0x00000010
-   ERADCOUNTER4               : origin = 0x0005E9B0, length = 0x00000010
-   ERADGLOBAL                 : origin = 0x0005E800, length = 0x00000014
-   ERADHWBP1                  : origin = 0x0005E900, length = 0x00000008
-   ERADHWBP2                  : origin = 0x0005E908, length = 0x00000008
-   ERADHWBP3                  : origin = 0x0005E910, length = 0x00000008
-   ERADHWBP4                  : origin = 0x0005E918, length = 0x00000008
-   ERADHWBP5                  : origin = 0x0005E920, length = 0x00000008
-   ERADHWBP6                  : origin = 0x0005E928, length = 0x00000008
-   ERADHWBP7                  : origin = 0x0005E930, length = 0x00000008
-   ERADHWBP8                  : origin = 0x0005E938, length = 0x00000008
+   EQEP1                      : origin = 0x00005100, length = 0x00000022
+   EQEP2                      : origin = 0x00005140, length = 0x00000022
+   EQEP3                      : origin = 0x00005180, length = 0x00000022
    FLASH0CTRL                 : origin = 0x0005F800, length = 0x00000182
    FLASH0ECC                  : origin = 0x0005FB00, length = 0x00000028
-   FSIRXA                     : origin = 0x00006680, length = 0x00000050
-   FSITXA                     : origin = 0x00006600, length = 0x00000050
-   GPIOCTRL                   : origin = 0x00007C00, length = 0x00000200
-   GPIODATA                   : origin = 0x00007F00, length = 0x00000040
-   HRCAP6                     : origin = 0x00005360, length = 0x00000020
-   HRCAP7                     : origin = 0x000053A0, length = 0x00000020
+   FLASHPUMPSEMAPHORE         : origin = 0x00050024, length = 0x00000002
+   GPIOCTRL                   : origin = 0x00007C00, length = 0x00000180
+   GPIODATA                   : origin = 0x00007F00, length = 0x00000030
    I2CA                       : origin = 0x00007300, length = 0x00000022
+   I2CB                       : origin = 0x00007340, length = 0x00000022
    INPUTXBAR                  : origin = 0x00007900, length = 0x00000020
-   LINA                       : origin = 0x00006A00, length = 0x000000EC
+   IPC                        : origin = 0x00050000, length = 0x00000024
    MEMORYERROR                : origin = 0x0005F500, length = 0x00000040
    MEMCFG                     : origin = 0x0005F400, length = 0x00000080
-   NMIINTRUPT                 : origin = 0x00007060, length = 0x00000008
+   MCBSPA                     : origin = 0x00006000, length = 0x00000024
+   MCBSPB                     : origin = 0x00006040, length = 0x00000024
+   NMIINTRUPT                 : origin = 0x00007060, length = 0x00000007
    OUTPUTXBAR                 : origin = 0x00007A80, length = 0x00000040
-   SYSPERIPHAC                : origin = 0x0005D500, length = 0x00000200
-   PGA1                       : origin = 0x00005B00, length = 0x00000010
-   PGA2                       : origin = 0x00005B10, length = 0x00000010
-   PGA3                       : origin = 0x00005B20, length = 0x00000010
-   PGA4                       : origin = 0x00005B30, length = 0x00000010
-   PGA5                       : origin = 0x00005B40, length = 0x00000010
-   PGA6                       : origin = 0x00005B50, length = 0x00000010
-   PGA7                       : origin = 0x00005B60, length = 0x00000010
    PIECTRL                    : origin = 0x00000CE0, length = 0x0000001A
    PIEVECTTABLE               : origin = 0x00000D00, length = 0x00000200
-   PMBUSA                     : origin = 0x00006400, length = 0x00000020
+   ROMPREFETCH                : origin = 0x0005E608, length = 0x00000002
+   ROMWAITSTATE               : origin = 0x0005F540, length = 0x00000002
    SCIA                       : origin = 0x00007200, length = 0x00000010
    SCIB                       : origin = 0x00007210, length = 0x00000010
-   SDFM1                      : origin = 0x00005E00, length = 0x00000070
+   SCIC                       : origin = 0x00007220, length = 0x00000010
+   SCID                       : origin = 0x00007230, length = 0x00000010
+   SDFM1                      : origin = 0x00005E00, length = 0x00000080
+   SDFM2                      : origin = 0x00005E80, length = 0x00000080
    SPIA                       : origin = 0x00006100, length = 0x00000010
    SPIB                       : origin = 0x00006110, length = 0x00000010
+   SPIC                       : origin = 0x00006120, length = 0x00000010
    SYNCSOC                    : origin = 0x00007940, length = 0x00000006
-   UID                        : origin = 0x000703CC, length = 0x00000010
-   WD                         : origin = 0x00007000, length = 0x0000002C
+   UID                        : origin = 0x000703C0, length = 0x00000010
+   UPP                        : origin = 0x00006200, length = 0x00000048
+   WD                         : origin = 0x00007000, length = 0x0000002B
    XBAR                       : origin = 0x00007920, length = 0x00000020
-   XINT                       : origin = 0x00007070, length = 0x0000000C
+   XINT                       : origin = 0x00007070, length = 0x0000000B
 
 }
 
@@ -141,13 +134,14 @@ UNION run = PIEVECTTABLE
    AdcaRegsFile               : > ADCA, type=NOINIT
    AdcbRegsFile               : > ADCB, type=NOINIT
    AdccRegsFile               : > ADCC, type=NOINIT
+   AdcdRegsFile               : > ADCD, type=NOINIT
    AdcaResultRegsFile         : > ADCARESULT, type=NOINIT
    AdcbResultRegsFile         : > ADCBRESULT, type=NOINIT
    AdccResultRegsFile         : > ADCCRESULT, type=NOINIT
+   AdcdResultRegsFile         : > ADCDRESULT, type=NOINIT
    AnalogSubsysRegsFile       : > ANALOGSUBSYS, type=NOINIT
    CanaRegsFile               : > CANA, type=NOINIT
    CanbRegsFile               : > CANB, type=NOINIT
-   ClaPromCrc0RegsFile        : > CLAPROMCRC0, type=NOINIT
    Cla1RegsFile               : > CLA1, type=NOINIT
    Clb1DataExchRegsFile       : > CLB1DATAEXCH, type=NOINIT
    Clb2DataExchRegsFile       : > CLB2DATAEXCH, type=NOINIT
@@ -161,7 +155,7 @@ UNION run = PIEVECTTABLE
    Clb2LogicCtrlRegsFile      : > CLB2LOGICCTRL, type=NOINIT
    Clb3LogicCtrlRegsFile      : > CLB3LOGICCTRL, type=NOINIT
    Clb4LogicCtrlRegsFile      : > CLB4LOGICCTRL, type=NOINIT
-   CLBXbarRegsFile            : > CLBXBAR, type=NOINIT
+   ClbXbarRegsFile            : > CLBXBAR, type=NOINIT
    ClkCfgRegsFile             : > CLKCFG, type=NOINIT
    Cmpss1RegsFile             : > CMPSS1, type=NOINIT
    Cmpss2RegsFile             : > CMPSS2, type=NOINIT
@@ -170,18 +164,17 @@ UNION run = PIEVECTTABLE
    Cmpss5RegsFile             : > CMPSS5, type=NOINIT
    Cmpss6RegsFile             : > CMPSS6, type=NOINIT
    Cmpss7RegsFile             : > CMPSS7, type=NOINIT
+   Cmpss8RegsFile             : > CMPSS8, type=NOINIT
    CpuTimer0RegsFile          : > CPUTIMER0, type=NOINIT
    CpuTimer1RegsFile          : > CPUTIMER1, type=NOINIT
    CpuTimer2RegsFile          : > CPUTIMER2, type=NOINIT
    CpuSysRegsFile             : > CPUSYS, type=NOINIT
    DacaRegsFile               : > DACA, type=NOINIT
    DacbRegsFile               : > DACB, type=NOINIT
-   Dcc0RegsFile               : > DCC0, type=NOINIT
-   DcsmBank0Z1RegsFile        : > DCSMBANK0Z1, type=NOINIT
-   DcsmBank0Z2RegsFile        : > DCSMBANK0Z2, type=NOINIT
-   DcsmBank1Z1RegsFile        : > DCSMBANK1Z1, type=NOINIT
-   DcsmBank1Z2RegsFile        : > DCSMBANK1Z2, type=NOINIT
+   DaccRegsFile               : > DACC, type=NOINIT
    DcsmCommonRegsFile         : > DCSMCOMMON, type=NOINIT
+   DcsmZ1RegsFile             : > DCSMZ1, type=NOINIT
+   DcsmZ2RegsFile             : > DCSMZ2, type=NOINIT
    DevCfgRegsFile             : > DEVCFG, type=NOINIT
    DmaClaSrcSelRegsFile       : > DMACLASRCSEL, type=NOINIT
    DmaRegsFile                : > DMA, type=NOINIT
@@ -191,7 +184,10 @@ UNION run = PIEVECTTABLE
    ECap4RegsFile              : > ECAP4, type=NOINIT
    ECap5RegsFile              : > ECAP5, type=NOINIT
    ECap6RegsFile              : > ECAP6, type=NOINIT
-   ECap7RegsFile              : > ECAP7, type=NOINIT
+   Emif1ConfigRegsFile        : > EMIF1CONFIG, type=NOINIT
+   Emif2ConfigRegsFile        : > EMIF2CONFIG, type=NOINIT
+   Emif1RegsFile              : > EMIF1, type=NOINIT
+   Emif2RegsFile              : > EMIF2, type=NOINIT
    EPwm1RegsFile              : > EPWM1, type=NOINIT
    EPwm2RegsFile              : > EPWM2, type=NOINIT
    EPwm3RegsFile              : > EPWM3, type=NOINIT
@@ -200,55 +196,45 @@ UNION run = PIEVECTTABLE
    EPwm6RegsFile              : > EPWM6, type=NOINIT
    EPwm7RegsFile              : > EPWM7, type=NOINIT
    EPwm8RegsFile              : > EPWM8, type=NOINIT
+   EPwm9RegsFile              : > EPWM9, type=NOINIT
+   EPwm10RegsFile             : > EPWM10, type=NOINIT
+   EPwm11RegsFile             : > EPWM11, type=NOINIT
+   EPwm12RegsFile             : > EPWM12, type=NOINIT
    EPwmXbarRegsFile           : > EPWMXBAR, type=NOINIT
    EQep1RegsFile              : > EQEP1, type=NOINIT
    EQep2RegsFile              : > EQEP2, type=NOINIT
-   EradCounter1RegsFile       : > ERADCOUNTER1, type=NOINIT
-   EradCounter2RegsFile       : > ERADCOUNTER2, type=NOINIT
-   EradCounter3RegsFile       : > ERADCOUNTER3, type=NOINIT
-   EradCounter4RegsFile       : > ERADCOUNTER4, type=NOINIT
-   EradGlobalRegsFile         : > ERADGLOBAL, type=NOINIT
-   EradHWBP1RegsFile          : > ERADHWBP1, type=NOINIT
-   EradHWBP2RegsFile          : > ERADHWBP2, type=NOINIT
-   EradHWBP3RegsFile          : > ERADHWBP3, type=NOINIT
-   EradHWBP4RegsFile          : > ERADHWBP4, type=NOINIT
-   EradHWBP5RegsFile          : > ERADHWBP5, type=NOINIT
-   EradHWBP6RegsFile          : > ERADHWBP6, type=NOINIT
-   EradHWBP7RegsFile          : > ERADHWBP7, type=NOINIT
-   EradHWBP8RegsFile          : > ERADHWBP8, type=NOINIT
+   EQep3RegsFile              : > EQEP3, type=NOINIT
    Flash0CtrlRegsFile         : > FLASH0CTRL, type=NOINIT
    Flash0EccRegsFile          : > FLASH0ECC, type=NOINIT
-   FsiRxaRegsFile             : > FSIRXA, type=NOINIT
-   FsiTxaRegsFile             : > FSITXA, type=NOINIT
+   FlashPumpSemaphoreRegsFile : > FLASHPUMPSEMAPHORE, type=NOINIT
    GpioCtrlRegsFile           : > GPIOCTRL, type=NOINIT
    GpioDataRegsFile           : > GPIODATA, type=NOINIT
-   HRCap6RegsFile             : > HRCAP6, type=NOINIT
-   HRCap7RegsFile             : > HRCAP7, type=NOINIT
    I2caRegsFile               : > I2CA, type=NOINIT
+   I2cbRegsFile               : > I2CB, type=NOINIT
    InputXbarRegsFile          : > INPUTXBAR, type=NOINIT
-   LinaRegsFile               : > LINA, type=NOINIT
+   IpcRegsFile                : > IPC, type=NOINIT
    MemoryErrorRegsFile        : > MEMORYERROR, type=NOINIT
    MemCfgRegsFile             : > MEMCFG, type=NOINIT
+   McbspaRegsFile             : > MCBSPA, type=NOINIT
+   McbspbRegsFile             : > MCBSPB, type=NOINIT
    NmiIntruptRegsFile         : > NMIINTRUPT, type=NOINIT
    OutputXbarRegsFile         : > OUTPUTXBAR, type=NOINIT
-   SysPeriphAcRegsFile        : > SYSPERIPHAC, type=NOINIT
-   Pga1RegsFile               : > PGA1, type=NOINIT
-   Pga2RegsFile               : > PGA2, type=NOINIT
-   Pga3RegsFile               : > PGA3, type=NOINIT
-   Pga4RegsFile               : > PGA4, type=NOINIT
-   Pga5RegsFile               : > PGA5, type=NOINIT
-   Pga6RegsFile               : > PGA6, type=NOINIT
-   Pga7RegsFile               : > PGA7, type=NOINIT
    PieCtrlRegsFile            : > PIECTRL, type=NOINIT
-   PmbusaRegsFile             : > PMBUSA, type=NOINIT
+   RomPrefetchRegsFile        : > ROMPREFETCH, type=NOINIT
+   RomWaitStateRegsFile       : > ROMWAITSTATE, type=NOINIT
    SciaRegsFile               : > SCIA, type=NOINIT
    ScibRegsFile               : > SCIB, type=NOINIT
+   ScicRegsFile               : > SCIC, type=NOINIT
+   ScidRegsFile               : > SCID, type=NOINIT
    Sdfm1RegsFile              : > SDFM1, type=NOINIT
+   Sdfm2RegsFile              : > SDFM2, type=NOINIT
    SpiaRegsFile               : > SPIA, type=NOINIT
    SpibRegsFile               : > SPIB, type=NOINIT
+   SpicRegsFile               : > SPIC, type=NOINIT
    SyncSocRegsFile            : > SYNCSOC, type=NOINIT
-   UidRegsFile                : > UID, type=NOINIT
+   UppRegsFile                : > UPP, type=NOINIT
    WdRegsFile                 : > WD, type=NOINIT
+   UidRegsFile                : > UID, type=NOINIT
    XbarRegsFile               : > XBAR, type=NOINIT
    XintRegsFile               : > XINT, type=NOINIT
 }

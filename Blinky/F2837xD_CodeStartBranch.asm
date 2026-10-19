@@ -1,6 +1,6 @@
 ;//###########################################################################
 ;//
-;// FILE:  f28004x_codestartbranch.asm
+;// FILE:  F2837xD_CodeStartBranch.asm
 ;//
 ;// TITLE: Branch for redirecting code execution after boot.
 ;//
@@ -8,27 +8,27 @@
 ;// exiting the boot ROM code.
 ;//
 ;// The codestart section in the linker cmd file is used to physically place
-;// this code at the correct memory location. This section should be placed
-;// at the location the BOOT ROM will re-direct the code to. For example,
-;// for boot to FLASH this code will be located at 0x80000.
+;// this code at the correct memory location.  This section should be placed
+;// at the location the BOOT ROM will re-direct the code to.  For example,
+;// for boot to FLASH this code will be located at 0x3f7ff6.
 ;//
-;// In addition, the example f28004x projects are setup such that the codegen
-;// entry point is also set to the codestart label. This is done by linker
-;// option -e in the project build options. When the debugger loads the code,
+;// In addition, the example F2837xD projects are setup such that the codegen
+;// entry point is also set to the code_start label.  This is done by linker
+;// option -e in the project build options.  When the debugger loads the code,
 ;// it will automatically set the PC to the "entry point" address indicated by
-;// the -e linker option. In this case the debugger is simply assigning the PC,
+;// the -e linker option.  In this case the debugger is simply assigning the PC,
 ;// it is not the same as a full reset of the device.
 ;//
 ;// The compiler may warn that the entry point for the project is other then
-;//  _c_init00. _c_init00 is the C environment setup and is run before
-;// main() is entered. The codestart code will re-direct the execution
+;//  _c_init00.  _c_init00 is the C environment setup and is run before
+;// main() is entered. The code_start code will re-direct the execution
 ;// to _c_init00 and thus there is no worry and this warning can be ignored.
 ;//
 ;//###########################################################################
 ;//
-;//
+;// $Release Date:  $
 ;// $Copyright:
-;// Copyright (C) 2026 Texas Instruments Incorporated - http://www.ti.com/
+;// Copyright (C) 2013-2026 Texas Instruments Incorporated - http://www.ti.com/
 ;//
 ;// Redistribution and use in source and binary forms, with or without 
 ;// modification, are permitted provided that the following conditions 
