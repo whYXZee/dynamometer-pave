@@ -1,0 +1,845 @@
+******************************************************************************
+             TMS320C2000 Linker PC v25.11.1                    
+******************************************************************************
+>> Linked Sat Oct 24 15:56:13 2026
+
+OUTPUT FILE NAME:   <dual_axis_servo_drive_fcl_qep_f2837x.out>
+ENTRY POINT SYMBOL: "code_start"  address: 00080000
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  BOOT_RSVD             00000002   00000121  00000000  00000121  RWIX
+  RAMM0                 00000123   000002dd  00000000  000002dd  RWIX
+  RAMM1                 00000400   000003f8  00000380  00000078  RWIX
+  ADCA_RESULT           00000b00   00000020  00000000  00000020  RWIX
+  ADCB_RESULT           00000b20   00000020  00000000  00000020  RWIX
+  ADCC_RESULT           00000b40   00000020  00000000  00000020  RWIX
+  ADCD_RESULT           00000b60   00000020  00000000  00000020  RWIX
+  CPU_TIMER0            00000c00   00000008  00000000  00000008  RWIX
+  CPU_TIMER1            00000c08   00000008  00000000  00000008  RWIX
+  CPU_TIMER2            00000c10   00000008  00000000  00000008  RWIX
+  PIE_CTRL              00000ce0   00000020  0000001a  00000006  RWIX
+  PIE_VECT              00000d00   00000200  00000000  00000200  RWIX
+  DMA                   00001000   00000200  00000000  00000200  RWIX
+  CLA1                  00001400   00000040  00000000  00000040  RWIX
+  CLA1_MSGRAMLOW        00001480   00000080  00000000  00000080  RWIX
+  CLA1_MSGRAMHIGH       00001500   00000080  00000000  00000080  RWIX
+  EPWM1                 00004000   00000100  00000000  00000100  RWIX
+  EPWM2                 00004100   00000100  00000000  00000100  RWIX
+  EPWM3                 00004200   00000100  00000000  00000100  RWIX
+  EPWM4                 00004300   00000100  00000000  00000100  RWIX
+  EPWM5                 00004400   00000100  00000000  00000100  RWIX
+  EPWM6                 00004500   00000100  00000000  00000100  RWIX
+  EPWM7                 00004600   00000100  00000000  00000100  RWIX
+  EPWM8                 00004700   00000100  00000000  00000100  RWIX
+  EPWM9                 00004800   00000100  00000000  00000100  RWIX
+  EPWM10                00004900   00000100  00000000  00000100  RWIX
+  EPWM11                00004a00   00000100  00000000  00000100  RWIX
+  EPWM12                00004b00   00000100  00000000  00000100  RWIX
+  ECAP1                 00005000   00000020  00000000  00000020  RWIX
+  ECAP2                 00005020   00000020  00000000  00000020  RWIX
+  ECAP3                 00005040   00000020  00000000  00000020  RWIX
+  ECAP4                 00005060   00000020  00000000  00000020  RWIX
+  ECAP5                 00005080   00000020  00000000  00000020  RWIX
+  ECAP6                 000050a0   00000020  00000000  00000020  RWIX
+  EQEP1                 00005100   00000040  00000000  00000040  RWIX
+  EQEP2                 00005140   00000040  00000000  00000040  RWIX
+  EQEP3                 00005180   00000040  00000000  00000040  RWIX
+  DACA                  00005c00   00000010  00000000  00000010  RWIX
+  DACB                  00005c10   00000010  00000000  00000010  RWIX
+  DACC                  00005c20   00000010  00000000  00000010  RWIX
+  CMPSS1                00005c80   00000020  00000000  00000020  RWIX
+  CMPSS2                00005ca0   00000020  00000000  00000020  RWIX
+  CMPSS3                00005cc0   00000020  00000000  00000020  RWIX
+  CMPSS4                00005ce0   00000020  00000000  00000020  RWIX
+  CMPSS5                00005d00   00000020  00000000  00000020  RWIX
+  CMPSS6                00005d20   00000020  00000000  00000020  RWIX
+  CMPSS7                00005d40   00000020  00000000  00000020  RWIX
+  CMPSS8                00005d60   00000020  00000000  00000020  RWIX
+  SDFM1                 00005e00   00000080  00000000  00000080  RWIX
+  SDFM2                 00005e80   00000080  00000000  00000080  RWIX
+  MCBSPA                00006000   00000040  00000000  00000040  RWIX
+  MCBSPB                00006040   00000040  00000000  00000040  RWIX
+  SPIA                  00006100   00000010  00000000  00000010  RWIX
+  SPIB                  00006110   00000010  00000000  00000010  RWIX
+  SPIC                  00006120   00000010  00000000  00000010  RWIX
+  SPID                  00006130   00000010  00000000  00000010  RWIX
+  UPP                   00006200   00000100  00000000  00000100  RWIX
+  WD                    00007000   00000040  00000000  00000040  RWIX
+  NMIINTRUPT            00007060   00000010  00000000  00000010  RWIX
+  XINT                  00007070   00000010  00000000  00000010  RWIX
+  SCIA                  00007200   00000010  00000000  00000010  RWIX
+  SCIB                  00007210   00000010  00000000  00000010  RWIX
+  SCIC                  00007220   00000010  00000000  00000010  RWIX
+  SCID                  00007230   00000010  00000000  00000010  RWIX
+  I2CA                  00007300   00000040  00000000  00000040  RWIX
+  I2CB                  00007340   00000040  00000000  00000040  RWIX
+  ADCA                  00007400   00000080  00000000  00000080  RWIX
+  ADCB                  00007480   00000080  00000000  00000080  RWIX
+  ADCC                  00007500   00000080  00000000  00000080  RWIX
+  ADCD                  00007580   00000080  00000000  00000080  RWIX
+  INPUT_XBAR            00007900   00000020  00000000  00000020  RWIX
+  XBAR                  00007920   00000020  00000000  00000020  RWIX
+  SYNC_SOC              00007940   00000010  00000000  00000010  RWIX
+  DMACLASRCSEL          00007980   00000040  00000000  00000040  RWIX
+  EPWM_XBAR             00007a00   00000040  00000000  00000040  RWIX
+  CLB_XBAR              00007a40   00000040  00000000  00000040  RWIX
+  OUTPUT_XBAR           00007a80   00000040  00000000  00000040  RWIX
+  GPIOCTRL              00007c00   00000180  00000000  00000180  RWIX
+  GPIODAT               00007f00   00000030  00000000  00000030  RWIX
+  RAMLS0                00008000   00000800  00000709  000000f7  RWIX
+  RAMLS1                00008800   00000800  00000000  00000800  RWIX
+  RAMLS2                00009000   00000800  00000100  00000700  RWIX
+  RAMLS3                00009800   00000800  0000033c  000004c4  RWIX
+  RAMLS4                0000a000   00000800  00000384  0000047c  RWIX
+  RAMLS5                0000a800   00000800  00000000  00000800  RWIX
+  RAMD0                 0000b000   00000800  00000000  00000800  RWIX
+  RAMD1                 0000b800   00000800  00000000  00000800  RWIX
+  RAMGS0                0000c000   00001000  0000039c  00000c64  RWIX
+  RAMGS1                0000d000   00001000  00000000  00001000  RWIX
+  RAMGS2                0000e000   00001000  00000000  00001000  RWIX
+  RAMGS3                0000f000   00001000  00000000  00001000  RWIX
+  RAMGS4                00010000   00001000  00000000  00001000  RWIX
+  RAMGS5                00011000   00001000  00000000  00001000  RWIX
+  RAMGS6                00012000   00001000  00000000  00001000  RWIX
+  RAMGS7                00013000   00001000  00000000  00001000  RWIX
+  RAMGS8                00014000   00001000  00000000  00001000  RWIX
+  RAMGS9                00015000   00001000  00000000  00001000  RWIX
+  RAMGS10               00016000   00001000  00000000  00001000  RWIX
+  RAMGS11               00017000   00001000  00000000  00001000  RWIX
+  RAMGS12               00018000   00001000  00000000  00001000  RWIX
+  RAMGS13               00019000   00001000  00000000  00001000  RWIX
+  RAMGS14               0001a000   00001000  00000000  00001000  RWIX
+  RAMGS15               0001b000   00000ff8  00000000  00000ff8  RWIX
+  CPU2TOCPU1RAM         0003f800   00000400  00000000  00000400  RWIX
+  CPU1TOCPU2RAM         0003fc00   00000400  00000000  00000400  RWIX
+  EMIF1                 00047000   00000800  00000000  00000800  RWIX
+  EMIF2                 00047800   00000800  00000000  00000800  RWIX
+  CANA                  00048000   00000800  00000000  00000800  RWIX
+  CANA_MSG_RAM          00049000   00000800  00000000  00000800  RWIX
+  CANB                  0004a000   00000800  00000000  00000800  RWIX
+  CANB_MSG_RAM          0004b000   00000800  00000000  00000800  RWIX
+  IPC                   00050000   00000024  00000000  00000024  RWIX
+  FLASHPUMPSEMAPHORE    00050024   00000002  00000000  00000002  RWIX
+  DEV_CFG               0005d000   00000180  00000000  00000180  RWIX
+  ANALOG_SUBSYS         0005d180   00000080  00000000  00000080  RWIX
+  CLK_CFG               0005d200   00000100  00000000  00000100  RWIX
+  CPU_SYS               0005d300   00000100  00000000  00000100  RWIX
+  ROMPREFETCH           0005e608   00000002  00000000  00000002  RWIX
+  DCSM_Z1               0005f000   00000030  00000000  00000030  RWIX
+  DCSM_Z2               0005f040   00000030  00000000  00000030  RWIX
+  DCSM_COMMON           0005f070   00000010  00000000  00000010  RWIX
+  MEMCFG                0005f400   00000080  00000000  00000080  RWIX
+  EMIF1CONFIG           0005f480   00000020  00000000  00000020  RWIX
+  EMIF2CONFIG           0005f4a0   00000020  00000000  00000020  RWIX
+  ACCESSPROTECTION      0005f4c0   00000040  00000000  00000040  RWIX
+  MEMORYERROR           0005f500   00000040  00000000  00000040  RWIX
+  ROMWAITSTATE          0005f540   00000002  00000000  00000002  RWIX
+  FLASH0_CTRL           0005f800   00000300  00000000  00000300  RWIX
+  FLASH0_ECC            0005fb00   00000040  00000000  00000040  RWIX
+  BEGIN                 00080000   00000002  00000002  00000000  RWIX
+  FLASHA                00080002   00001ffe  00001ffc  00000002  RWIX
+  FLASHB                00082000   00002000  000003d7  00001c29  RWIX
+  FLASHC                00084000   00002000  00000000  00002000  RWIX
+  FLASHD                00086000   00002000  00000000  00002000  RWIX
+  FLASHE                00088000   00008000  0000039c  00007c64  RWIX
+  FLASHF                00090000   00008000  00000384  00007c7c  RWIX
+  FLASHG                00098000   00008000  000000a2  00007f5e  RWIX
+  FLASHH                000a0000   00008000  00000000  00008000  RWIX
+  FLASHI                000a8000   00008000  00000000  00008000  RWIX
+  FLASHJ                000b0000   00008000  00000000  00008000  RWIX
+  FLASHK                000b8000   00002000  00000000  00002000  RWIX
+  FLASHL                000ba000   00002000  00000000  00002000  RWIX
+  FLASHM                000bc000   00002000  00000000  00002000  RWIX
+  FLASHN                000be000   00001ff0  00000000  00001ff0  RWIX
+  RESET                 003fffc0   00000002  00000000  00000002  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+Cla1SoftIntRegsFile 
+*          0    00000ce0    00000000     DSECT
+
+PieCtrlRegsFile 
+*          0    00000ce0    0000001a     UNINITIALIZED
+                  00000ce0    0000001a     F2837xD_GlobalVariableDefs.obj (PieCtrlRegsFile)
+
+codestart 
+*          0    00080000    00000002     
+                  00080000    00000002     F2837xD_CodeStartBranch.obj (codestart)
+
+.cinit     0    00098000    000000a2     
+                  00098000    0000006b     (.cinit.ClaData.load) [load image, compression = lzss]
+                  0009806b    00000018     (.cinit..data.load) [load image, compression = lzss]
+                  00098083    00000001     --HOLE-- [fill = 0]
+                  00098084    00000006     (__TI_handler_table)
+                  0009808a    00000004     (.cinit..bss.load) [load image, compression = zero_init]
+                  0009808e    00000004     (.cinit.CLAscratch.load) [load image, compression = zero_init]
+                  00098092    00000010     (__TI_cinit_table)
+
+.reset     0    003fffc0    00000000     DSECT
+
+.stack     0    00000400    00000380     UNINITIALIZED
+                  00000400    00000380     --HOLE--
+
+.init_array 
+*          0    00098000    00000000     UNINITIALIZED
+
+.bss       0    00008680    0000008c     UNINITIALIZED
+                  00008680    00000062     dual_axis_servo_drive.obj (.bss)
+                  000086e2    00000024     dual_axis_servo_drive.obj (.bss:halMtr)
+                  00008706    00000004     dual_axis_servo_drive.obj (.bss:halMtrHandle)
+                  0000870a    00000002     dual_axis_servo_drive.obj (.bss:FCL_cycleCount)
+
+.data      0    00008000    0000067d     UNINITIALIZED
+                  00008000    00000190     dual_axis_servo_drive.obj (.data:DBUFF_4CH1)
+                  00008190    00000190     dual_axis_servo_drive.obj (.data:DBUFF_4CH2)
+                  00008320    00000190     dual_axis_servo_drive.obj (.data:DBUFF_4CH3)
+                  000084b0    00000190     dual_axis_servo_drive.obj (.data:DBUFF_4CH4)
+                  00008640    00000022     dual_axis_servo_drive.obj (.data)
+                  00008662    00000006     device.obj (.data)
+                  00008668    00000006     rts2800_fpu32_eabi.lib : exit.c.obj (.data)
+                  0000866e    00000004     dual_axis_servo_drive.obj (.data:vTimer0)
+                  00008672    00000004     dual_axis_servo_drive.obj (.data:vTimer1)
+                  00008676    00000004     dual_axis_servo_drive.obj (.data:vTimer2)
+                  0000867a    00000002     rts2800_fpu32_eabi.lib : _lock.c.obj (.data:_lock)
+                  0000867c    00000001     dual_axis_servo_drive_user.obj (.data)
+
+ClaData    0    00009800    0000033c     UNINITIALIZED
+                  00009800    00000298     dual_axis_servo_drive.obj (ClaData)
+                  00009a98    000000a4     fcl_cpu_code_dm.obj (ClaData)
+
+Cla1Prog   0    00090000    00000384     RUN ADDR = 0000a000
+                  00090000    000000d4     fcl_cla_code_dm.obj (Cla1Prog:Cla1Task5)
+                  000900d4    000000ca     fcl_cla_code_dm.obj (Cla1Prog:Cla1Task1)
+                  0009019e    000000b0     fcl_cla_code_dm.obj (Cla1Prog:Cla1Task8)
+                  0009024e    000000aa     fcl_cla_code_dm.obj (Cla1Prog:Cla1Task4)
+                  000902f8    0000002c     fcl_cla_code_dm.obj (Cla1Prog:Cla1Task3)
+                  00090324    00000024     fcl_cla_code_dm.obj (Cla1Prog:Cla1Task2)
+                  00090348    00000022     fcl_cla_code_dm.obj (Cla1Prog:Cla1Task7)
+                  0009036a    0000001a     fcl_cla_code_dm.obj (Cla1Prog:Cla1Task6)
+
+CLAscratch 
+*          0    00009000    00000100     UNINITIALIZED
+                  00009000    00000100     --HOLE--
+
+.const_cla 
+*          0    0000a000    00000000     UNINITIALIZED
+
+.TI.ramfunc 
+*          0    00088000    0000039c     RUN ADDR = 0000c000
+                  00088000    000000e5     fcl_cpu_code_dm.obj (.TI.ramfunc:FCL_runPICtrlWrap_M1)
+                  000880e5    00000001     --HOLE-- [fill = 0]
+                  000880e6    000000da     fcl_cpu_code_dm.obj (.TI.ramfunc:FCL_runPICtrlWrap_M2)
+                  000881c0    000000d5     fcl_cpu_code_dm.obj (.TI.ramfunc:FCL_runPICtrl_M1)
+                  00088295    00000001     --HOLE-- [fill = 0]
+                  00088296    000000d1     fcl_cpu_code_dm.obj (.TI.ramfunc:FCL_runPICtrl_M2)
+                  00088367    00000031     fcl_cpu_code_dm.obj (.TI.ramfunc:FCL_resetController)
+                  00088398    00000004     sysctl.obj (.TI.ramfunc)
+
+.text.1    0    00080004    00001ffc     
+                  00080004    000003fc     dual_axis_servo_drive_hal.obj (.text:HAL_setupGPIOs)
+                  00080400    00000344     dual_axis_servo_drive.obj (.text:motor2ControlISR)
+                  00080744    00000314     dual_axis_servo_drive.obj (.text:motor1ControlISR)
+                  00080a58    00000294     dual_axis_servo_drive_user.obj (.text:initMotorParameters)
+                  00080cec    000001ca     sysctl.obj (.text:SysCtl_setClock)
+                  00080eb6    000001a7     dual_axis_servo_drive.obj (.text:main)
+                  0008105d    00000171     dual_axis_servo_drive.obj (.text:runMotorControl)
+                  000811ce    0000016d     dual_axis_servo_drive_user.obj (.text:runOffsetsCalculation)
+                  0008133b    00000158     dual_axis_servo_drive_user.obj (.text:initControlVars)
+                  00081493    0000011b     dual_axis_servo_drive_hal.obj (.text:HAL_setupMotorPWMs)
+                  000815ae    00000108     dual_axis_servo_drive_hal.obj (.text:HAL_setupMotorFaultProtection)
+                  000816b6    000000e5     dual_axis_servo_drive_hal.obj (.text:HAL_setupADCs)
+                  0008179b    000000de     device.obj (.text:Device_enableAllPeripherals)
+                  00081879    000000b4     sysctl.obj (.text:SysCtl_selectXTAL)
+                  0008192d    0000009e     dual_axis_servo_drive_hal.obj (.text:HAL_setupCLA)
+                  000819cb    0000009d     adc.obj (.text:ADC_setMode)
+                  00081a68    00000067     dual_axis_servo_drive_hal.obj (.text:HAL_setupCMPSS)
+                  00081acf    00000063     dlog_4ch_f.obj (.text:DLOG_4CH_F_FUNC)
+                  00081b32    0000005d     dual_axis_servo_drive_hal.obj (.text:HAL_setupQEP)
+                  00081b8f    00000058     dual_axis_servo_drive_hal.obj (.text:HAL_setupInterrupts)
+                  00081be7    00000056     memcfg.obj (.text:MemCfg_setLSRAMControllerSel)
+                  00081c3d    00000053     dual_axis_servo_drive_hal.obj (.text:HAL_init)
+                  00081c90    00000053     memcfg.obj (.text:MemCfg_getInitStatus)
+                  00081ce3    00000049     dual_axis_servo_drive_hal.obj (.text:HAL_MTR_init)
+                  00081d2c    00000048     dual_axis_servo_drive.obj (.text:runSyncControl)
+                  00081d74    00000044     sysctl.obj (.text:SysCtl_getDeviceParametric)
+                  00081db8    00000043     memcfg.obj (.text:MemCfg_initSections)
+                  00081dfb    00000041     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_initModule)
+                  00081e3c    0000003f                        : gpio.obj (.text:GPIO_setPadConfig)
+                  00081e7b    0000003d     device.obj (.text:Device_init)
+                  00081eb8    0000003a     dual_axis_servo_drive_user.obj (.text:resetControlVars)
+                  00081ef2    00000036     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_enable)
+                  00081f28    00000033     device.obj (.text:Device_configureTMXAnalogTrim)
+                  00081f5b    00000030     driverlib_eabi.lib : gpio.obj (.text:GPIO_setPinConfig)
+                  00081f8b    0000002f     dual_axis_servo_drive_hal.obj (.text:HAL_setParams)
+                  00081fba    0000002e     rts2800_fpu32_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss)
+                  00081fe8    00000018     dual_axis_servo_drive_hal.obj (.text:HAL_enableInterrupts)
+
+.text.2    0    00082000    000003d7     
+                  00082000    0000002b     sysctl.obj (.text:SysCtl_selectOscSource)
+                  0008202b    0000002b     xbar.obj (.text:XBAR_setEPWMMuxConfig)
+                  00082056    0000002b     rts2800_fpu32_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit)
+                  00082081    00000029                            : exit.c.obj (.text)
+                  000820aa    00000027     fcl_cpu_code_dm.obj (.text:FCL_initADC_3I)
+                  000820d1    00000022     driverlib_eabi.lib : gpio.obj (.text:GPIO_setControllerCore)
+                  000820f3    00000022                        : gpio.obj (.text:GPIO_setQualificationMode)
+                  00082115    00000020     device.obj (.text:Device_enableUnbondedGPIOPullups)
+                  00082135    00000020     driverlib_eabi.lib : gpio.obj (.text:GPIO_setDirectionMode)
+                  00082155    0000001f     dlog_4ch_f.obj (.text:DLOG_4CH_F_init)
+                  00082174    0000001e     device.obj (.text:Device_initGPIO)
+                  00082192    0000001e     rts2800_fpu32_eabi.lib : memcpy.c.obj (.text)
+                  000821b0    0000001d     device.obj (.text:Device_enableUnbondedGPIOPullupsFor100Pin)
+                  000821cd    0000001c     cla.obj (.text:CLA_setTriggerSource)
+                  000821e9    0000001c     fcl_cpu_code_dm.obj (.text:FCL_initPWM)
+                  00082205    0000001c     dual_axis_servo_drive.obj (.text:ramper)
+                  00082221    0000001a     dual_axis_servo_drive.obj (.text:A0)
+                  0008223b    0000001a     dual_axis_servo_drive_hal.obj (.text:HAL_setupCpuTimer)
+                  00082255    00000019     cmpss.obj (.text:CMPSS_configFilterHigh)
+                  0008226e    00000019     cmpss.obj (.text:CMPSS_configFilterLow)
+                  00082287    00000019     dual_axis_servo_drive_hal.obj (.text:HAL_setupCMPSS_DACValue)
+                  000822a0    00000017     dual_axis_servo_drive.obj (.text:B0)
+                  000822b7    00000017     dual_axis_servo_drive.obj (.text:C0)
+                  000822ce    00000017     rts2800_fpu32_eabi.lib : boot28.asm.obj (.text)
+                  000822e5    00000015     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_initVectorTable)
+                  000822fa    00000012     dual_axis_servo_drive.obj (.text:A2)
+                  0008230c    00000012     dual_axis_servo_drive.obj (.text:C1)
+                  0008231e    00000012     rts2800_fpu32_eabi.lib : args_main.c.obj (.text)
+                  00082330    00000010     dual_axis_servo_drive.obj (.text:A3)
+                  00082340    0000000f     sysctl.obj (.text:SysCtl_pollCpuTimer)
+                  0008234f    0000000d     dual_axis_servo_drive.obj (.text:A1)
+                  0008235c    0000000d     rts2800_fpu32_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
+                  00082369    0000000c     dual_axis_servo_drive_hal.obj (.text:HAL_setMotorParams)
+                  00082375    0000000c     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_defaultHandler)
+                  00082381    0000000a                        : interrupt.obj (.text:Interrupt_illegalOperationHandler)
+                  0008238b    0000000a                        : interrupt.obj (.text:Interrupt_nmiHandler)
+                  00082395    00000008     F2837xD_CodeStartBranch.obj (.text)
+                  0008239d    00000008     fcl_cpu_code_dm.obj (.text:FCL_initQEP)
+                  000823a5    00000008     rts2800_fpu32_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none)
+                  000823ad    00000006     dual_axis_servo_drive.obj (.text:B1)
+                  000823b3    00000006     dual_axis_servo_drive.obj (.text:B2)
+                  000823b9    00000006     dual_axis_servo_drive.obj (.text:B3)
+                  000823bf    00000006     dual_axis_servo_drive.obj (.text:C2)
+                  000823c5    00000006     dual_axis_servo_drive.obj (.text:C3)
+                  000823cb    00000006     cputimer.obj (.text:CPUTimer_setEmulationMode)
+                  000823d1    00000002     fcl_cpu_code_dm.obj (.text:FCL_getSwVersion)
+                  000823d3    00000002     rts2800_fpu32_eabi.lib : pre_init.c.obj (.text)
+                  000823d5    00000001                            : _lock.c.obj (.text)
+                  000823d6    00000001                            : startup.c.obj (.text)
+
+MODULE SUMMARY
+
+       Module                           code    ro data   rw data
+       ------                           ----    -------   -------
+    .\sources\
+       dual_axis_servo_drive.obj        2683    0         2450   
+       dual_axis_servo_drive_hal.obj    2528    0         0      
+       fcl_cpu_code_dm.obj              1913    0         164    
+       fcl_cla_code_dm.obj              1800    0         0      
+       dual_axis_servo_drive_user.obj   1427    0         1      
+       dlog_4ch_f.obj                   130     0         0      
+    +--+--------------------------------+-------+---------+---------+
+       Total:                           10481   0         2615   
+                                                                 
+    .\src_device\
+       device.obj                       425     0         6      
+       F2837xD_GlobalVariableDefs.obj   0       0         26     
+       F2837xD_CodeStartBranch.obj      10      0         0      
+    +--+--------------------------------+-------+---------+---------+
+       Total:                           435     0         32     
+                                                                 
+    .\src_driver\
+       sysctl.obj                       772     0         0      
+       memcfg.obj                       236     0         0      
+       adc.obj                          157     0         0      
+       cmpss.obj                        50      0         0      
+       xbar.obj                         43      0         0      
+       cla.obj                          28      0         0      
+       cputimer.obj                     6       0         0      
+    +--+--------------------------------+-------+---------+---------+
+       Total:                           1292    0         0      
+                                                                 
+    ..\driverlib_eabi.lib
+       gpio.obj                         211     0         0      
+       interrupt.obj                    172     0         0      
+    +--+--------------------------------+-------+---------+---------+
+       Total:                           383     0         0      
+                                                                 
+    C:\ti\ccs2101\ccs\tools\compiler\ti-cgt-c2000_25.11.1.LTS\lib\rts2800_fpu32_eabi.lib
+       exit.c.obj                       41      0         6      
+       copy_decompress_lzss.c.obj       46      0         0      
+       autoinit.c.obj                   43      0         0      
+       memcpy.c.obj                     30      0         0      
+       boot28.asm.obj                   23      0         0      
+       args_main.c.obj                  18      0         0      
+       copy_zero_init.c.obj             13      0         0      
+       copy_decompress_none.c.obj       8       0         0      
+       _lock.c.obj                      1       0         2      
+       pre_init.c.obj                   2       0         0      
+       startup.c.obj                    1       0         0      
+    +--+--------------------------------+-------+---------+---------+
+       Total:                           226     0         8      
+                                                                 
+       Stack:                           0       0         896    
+       Linker Generated:                0       161       0      
+    +--+--------------------------------+-------+---------+---------+
+       Grand Total:                     12817   161       3551   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00098092 records: 4, size/record: 4, table size: 16
+	ClaData: load addr=00098000, load size=0000006b bytes, run addr=00009800, run size=0000033c bytes, compression=lzss
+	.data: load addr=0009806b, load size=00000018 bytes, run addr=00008000, run size=0000067d bytes, compression=lzss
+	.bss: load addr=0009808a, load size=00000004 bytes, run addr=00008680, run size=0000008c bytes, compression=zero_init
+	CLAscratch: load addr=0009808e, load size=00000004 bytes, run addr=00009000, run size=00000100 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00098084 records: 3, size/record: 2, table size: 6
+	index: 0, handler: __TI_zero_init
+	index: 1, handler: __TI_decompress_lzss
+	index: 2, handler: __TI_decompress_none
+
+
+GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
+
+address     data page           name
+--------    ----------------    ----
+00000400      10 (00000400)     __stack
+
+00000ce0      33 (00000cc0)     PieCtrlRegs
+
+00008000     200 (00008000)     DBUFF_4CH1
+
+00008190     206 (00008180)     DBUFF_4CH2
+
+00008320     20c (00008300)     DBUFF_4CH3
+
+000084b0     212 (00008480)     DBUFF_4CH4
+
+00008640     219 (00008640)     serialCommsTimer
+00008641     219 (00008640)     clkPrescale
+00008642     219 (00008640)     sampWin
+00008643     219 (00008640)     thresh
+00008644     219 (00008640)     enableFlag
+00008645     219 (00008640)     backTicker
+00008646     219 (00008640)     led1Cnt
+00008647     219 (00008640)     led2Cnt
+00008648     219 (00008640)     runMotor
+00008649     219 (00008640)     ctrlState
+0000864a     219 (00008640)     flagSyncRun
+0000864c     219 (00008640)     VdTesting
+0000864e     219 (00008640)     VqTesting
+00008650     219 (00008640)     posPtrMax
+00008652     219 (00008640)     dlogCh1
+00008654     219 (00008640)     dlogCh2
+00008656     219 (00008640)     dlogCh3
+00008658     219 (00008640)     dlogCh4
+0000865a     219 (00008640)     speedRef
+0000865c     219 (00008640)     IdRef
+0000865e     219 (00008640)     IqRef
+00008660     219 (00008640)     rampDelayMax
+00008662     219 (00008640)     Example_Result
+00008664     219 (00008640)     Example_PassCount
+00008666     219 (00008640)     Example_Fail
+00008668     219 (00008640)     __TI_enable_exit_profile_output
+0000866a     219 (00008640)     __TI_cleanup_ptr
+0000866c     219 (00008640)     __TI_dtors_ptr
+0000866e     219 (00008640)     vTimer0
+00008672     219 (00008640)     vTimer1
+00008676     219 (00008640)     vTimer2
+0000867a     219 (00008640)     _lock
+0000867c     219 (00008640)     offsetCalCounter
+
+00008680     21a (00008680)     Alpha_State_Ptr
+00008682     21a (00008680)     A_Task_Ptr
+00008684     21a (00008680)     B_Task_Ptr
+00008686     21a (00008680)     C_Task_Ptr
+00008688     21a (00008680)     halHandle
+0000868a     21a (00008680)     dlog_4ch1
+
+000086c0     21b (000086c0)     hal
+000086e2     21b (000086c0)     halMtr
+
+00008706     21c (00008700)     halMtrHandle
+0000870a     21c (00008700)     FCL_cycleCount
+
+00009800     260 (00009800)     motorVars
+
+00009a98     26a (00009a80)     fclVars
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+page  address   name                                     
+----  -------   ----                                     
+0     00082221  A0                                       
+0     0008234f  A1                                       
+0     000822fa  A2                                       
+0     00082330  A3                                       
+0     000819cb  ADC_setMode                              
+0     00008682  A_Task_Ptr                               
+0     00008680  Alpha_State_Ptr                          
+0     000822a0  B0                                       
+0     000823ad  B1                                       
+0     000823b3  B2                                       
+0     000823b9  B3                                       
+0     00008684  B_Task_Ptr                               
+0     00082081  C$$EXIT                                  
+0     000822b7  C0                                       
+0     0008230c  C1                                       
+0     000823bf  C2                                       
+0     000823c5  C3                                       
+abs   00000100  CLA_SCRATCHPAD_SIZE                      
+0     000821cd  CLA_setTriggerSource                     
+0     00082255  CMPSS_configFilterHigh                   
+0     0008226e  CMPSS_configFilterLow                    
+0     000823cb  CPUTimer_setEmulationMode                
+0     00008686  C_Task_Ptr                               
+abs   00000000  Cla1ConstLoadSize                        
+0     0000a000  Cla1ConstLoadStart                       
+0     0000a000  Cla1ConstRunStart                        
+0     0000a0d4  Cla1Task1                                
+0     0000a324  Cla1Task2                                
+0     0000a2f8  Cla1Task3                                
+0     0000a24e  Cla1Task4                                
+0     0000a000  Cla1Task5                                
+0     0000a36a  Cla1Task6                                
+0     0000a348  Cla1Task7                                
+0     0000a19e  Cla1Task8                                
+0     00090384  Cla1funcsLoadEnd                         
+abs   00000384  Cla1funcsLoadSize                        
+0     00090000  Cla1funcsLoadStart                       
+0     0000a000  Cla1funcsRunStart                        
+0     00008000  DBUFF_4CH1                               
+0     00008190  DBUFF_4CH2                               
+0     00008320  DBUFF_4CH3                               
+0     000084b0  DBUFF_4CH4                               
+0     00081acf  DLOG_4CH_F_FUNC                          
+0     00082155  DLOG_4CH_F_init                          
+0     00081f28  Device_configureTMXAnalogTrim            
+0     0008179b  Device_enableAllPeripherals              
+0     00082115  Device_enableUnbondedGPIOPullups         
+0     000821b0  Device_enableUnbondedGPIOPullupsFor100Pin
+0     00081e7b  Device_init                              
+0     00082174  Device_initGPIO                          
+0     00008666  Example_Fail                             
+0     00008664  Example_PassCount                        
+0     00008662  Example_Result                           
+0     0000870a  FCL_cycleCount                           
+0     000823d1  FCL_getSwVersion                         
+0     000820aa  FCL_initADC_3I                           
+0     000821e9  FCL_initPWM                              
+0     0008239d  FCL_initQEP                              
+0     0000c367  FCL_resetController                      
+0     0000c000  FCL_runPICtrlWrap_M1                     
+0     0000c0e6  FCL_runPICtrlWrap_M2                     
+0     0000c1c0  FCL_runPICtrl_M1                         
+0     0000c296  FCL_runPICtrl_M2                         
+0     000820d1  GPIO_setControllerCore                   
+0     00082135  GPIO_setDirectionMode                    
+0     00081e3c  GPIO_setPadConfig                        
+0     00081f5b  GPIO_setPinConfig                        
+0     000820f3  GPIO_setQualificationMode                
+0     00081ce3  HAL_MTR_init                             
+0     00081fe8  HAL_enableInterrupts                     
+0     00081c3d  HAL_init                                 
+0     00082369  HAL_setMotorParams                       
+0     00081f8b  HAL_setParams                            
+0     000816b6  HAL_setupADCs                            
+0     0008192d  HAL_setupCLA                             
+0     00081a68  HAL_setupCMPSS                           
+0     00082287  HAL_setupCMPSS_DACValue                  
+0     0008223b  HAL_setupCpuTimer                        
+0     00080004  HAL_setupGPIOs                           
+0     00081b8f  HAL_setupInterrupts                      
+0     000815ae  HAL_setupMotorFaultProtection            
+0     00081493  HAL_setupMotorPWMs                       
+0     00081b32  HAL_setupQEP                             
+0     0000865c  IdRef                                    
+0     00082375  Interrupt_defaultHandler                 
+0     00081ef2  Interrupt_enable                         
+0     00082381  Interrupt_illegalOperationHandler        
+0     00081dfb  Interrupt_initModule                     
+0     000822e5  Interrupt_initVectorTable                
+0     0008238b  Interrupt_nmiHandler                     
+0     0000865e  IqRef                                    
+0     00081c90  MemCfg_getInitStatus                     
+0     00081db8  MemCfg_initSections                      
+0     00081be7  MemCfg_setLSRAMControllerSel             
+0     00000ce0  PieCtrlRegs                              
+0     0008839c  RamfuncsLoadEnd                          
+abs   0000039c  RamfuncsLoadSize                         
+0     00088000  RamfuncsLoadStart                        
+0     0000c39c  RamfuncsRunEnd                           
+abs   0000039c  RamfuncsRunSize                          
+0     0000c000  RamfuncsRunStart                         
+0     0000c398  SysCtl_delay                             
+0     00081d74  SysCtl_getDeviceParametric               
+0     00082000  SysCtl_selectOscSource                   
+0     00081879  SysCtl_selectXTAL                        
+0     00080cec  SysCtl_setClock                          
+0     0000864c  VdTesting                                
+0     0000864e  VqTesting                                
+0     0008202b  XBAR_setEPWMMuxConfig                    
+0     00098092  __TI_CINIT_Base                          
+0     000980a2  __TI_CINIT_Limit                         
+0     000980a2  __TI_CINIT_Warm                          
+0     00098084  __TI_Handler_Table_Base                  
+0     0009808a  __TI_Handler_Table_Limit                 
+0     00000780  __TI_STACK_END                           
+abs   00000380  __TI_STACK_SIZE                          
+0     00082056  __TI_auto_init_nobinit_nopinit           
+0     0000866a  __TI_cleanup_ptr                         
+0     00081fba  __TI_decompress_lzss                     
+0     000823a5  __TI_decompress_none                     
+0     0000866c  __TI_dtors_ptr                           
+0     00008668  __TI_enable_exit_profile_output          
+abs   ffffffff  __TI_pprof_out_hndl                      
+abs   ffffffff  __TI_prof_data_size                      
+abs   ffffffff  __TI_prof_data_start                     
+0     0008235c  __TI_zero_init_nomemset                  
+abs   ffffffff  __c_args__                               
+0     00000400  __stack                                  
+0     0008231e  _args_main                               
+0     000822ce  _c_int00                                 
+0     0000867a  _lock                                    
+0     000823d5  _nop                                     
+0     000823d6  _system_post_cinit                       
+0     000823d3  _system_pre_init                         
+0     00082081  abort                                    
+0     00008645  backTicker                               
+0     00008641  clkPrescale                              
+0     00080000  code_start                               
+0     00008649  ctrlState                                
+0     00008652  dlogCh1                                  
+0     00008654  dlogCh2                                  
+0     00008656  dlogCh3                                  
+0     00008658  dlogCh4                                  
+0     0000868a  dlog_4ch1                                
+0     00008644  enableFlag                               
+0     00082083  exit                                     
+0     00009a98  fclVars                                  
+0     0000864a  flagSyncRun                              
+0     000086c0  hal                                      
+0     00008688  halHandle                                
+0     000086e2  halMtr                                   
+0     00008706  halMtrHandle                             
+0     0008133b  initControlVars                          
+0     00080a58  initMotorParameters                      
+0     00008646  led1Cnt                                  
+0     00008647  led2Cnt                                  
+0     00080eb6  main                                     
+0     00082192  memcpy                                   
+0     00080744  motor1ControlISR                         
+0     00080400  motor2ControlISR                         
+0     00009800  motorVars                                
+0     0000867c  offsetCalCounter                         
+0     00008650  posPtrMax                                
+0     00008660  rampDelayMax                             
+0     00082205  ramper                                   
+0     00081eb8  resetControlVars                         
+0     00008648  runMotor                                 
+0     0008105d  runMotorControl                          
+0     000811ce  runOffsetsCalculation                    
+0     00081d2c  runSyncControl                           
+0     00008642  sampWin                                  
+0     00008640  serialCommsTimer                         
+0     0000865a  speedRef                                 
+0     00008643  thresh                                   
+0     0000866e  vTimer0                                  
+0     00008672  vTimer1                                  
+0     00008676  vTimer2                                  
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+page  address   name                                     
+----  -------   ----                                     
+0     00000400  __stack                                  
+0     00000780  __TI_STACK_END                           
+0     00000ce0  PieCtrlRegs                              
+0     00008000  DBUFF_4CH1                               
+0     00008190  DBUFF_4CH2                               
+0     00008320  DBUFF_4CH3                               
+0     000084b0  DBUFF_4CH4                               
+0     00008640  serialCommsTimer                         
+0     00008641  clkPrescale                              
+0     00008642  sampWin                                  
+0     00008643  thresh                                   
+0     00008644  enableFlag                               
+0     00008645  backTicker                               
+0     00008646  led1Cnt                                  
+0     00008647  led2Cnt                                  
+0     00008648  runMotor                                 
+0     00008649  ctrlState                                
+0     0000864a  flagSyncRun                              
+0     0000864c  VdTesting                                
+0     0000864e  VqTesting                                
+0     00008650  posPtrMax                                
+0     00008652  dlogCh1                                  
+0     00008654  dlogCh2                                  
+0     00008656  dlogCh3                                  
+0     00008658  dlogCh4                                  
+0     0000865a  speedRef                                 
+0     0000865c  IdRef                                    
+0     0000865e  IqRef                                    
+0     00008660  rampDelayMax                             
+0     00008662  Example_Result                           
+0     00008664  Example_PassCount                        
+0     00008666  Example_Fail                             
+0     00008668  __TI_enable_exit_profile_output          
+0     0000866a  __TI_cleanup_ptr                         
+0     0000866c  __TI_dtors_ptr                           
+0     0000866e  vTimer0                                  
+0     00008672  vTimer1                                  
+0     00008676  vTimer2                                  
+0     0000867a  _lock                                    
+0     0000867c  offsetCalCounter                         
+0     00008680  Alpha_State_Ptr                          
+0     00008682  A_Task_Ptr                               
+0     00008684  B_Task_Ptr                               
+0     00008686  C_Task_Ptr                               
+0     00008688  halHandle                                
+0     0000868a  dlog_4ch1                                
+0     000086c0  hal                                      
+0     000086e2  halMtr                                   
+0     00008706  halMtrHandle                             
+0     0000870a  FCL_cycleCount                           
+0     00009800  motorVars                                
+0     00009a98  fclVars                                  
+0     0000a000  Cla1ConstLoadStart                       
+0     0000a000  Cla1ConstRunStart                        
+0     0000a000  Cla1Task5                                
+0     0000a000  Cla1funcsRunStart                        
+0     0000a0d4  Cla1Task1                                
+0     0000a19e  Cla1Task8                                
+0     0000a24e  Cla1Task4                                
+0     0000a2f8  Cla1Task3                                
+0     0000a324  Cla1Task2                                
+0     0000a348  Cla1Task7                                
+0     0000a36a  Cla1Task6                                
+0     0000c000  FCL_runPICtrlWrap_M1                     
+0     0000c000  RamfuncsRunStart                         
+0     0000c0e6  FCL_runPICtrlWrap_M2                     
+0     0000c1c0  FCL_runPICtrl_M1                         
+0     0000c296  FCL_runPICtrl_M2                         
+0     0000c367  FCL_resetController                      
+0     0000c398  SysCtl_delay                             
+0     0000c39c  RamfuncsRunEnd                           
+0     00080000  code_start                               
+0     00080004  HAL_setupGPIOs                           
+0     00080400  motor2ControlISR                         
+0     00080744  motor1ControlISR                         
+0     00080a58  initMotorParameters                      
+0     00080cec  SysCtl_setClock                          
+0     00080eb6  main                                     
+0     0008105d  runMotorControl                          
+0     000811ce  runOffsetsCalculation                    
+0     0008133b  initControlVars                          
+0     00081493  HAL_setupMotorPWMs                       
+0     000815ae  HAL_setupMotorFaultProtection            
+0     000816b6  HAL_setupADCs                            
+0     0008179b  Device_enableAllPeripherals              
+0     00081879  SysCtl_selectXTAL                        
+0     0008192d  HAL_setupCLA                             
+0     000819cb  ADC_setMode                              
+0     00081a68  HAL_setupCMPSS                           
+0     00081acf  DLOG_4CH_F_FUNC                          
+0     00081b32  HAL_setupQEP                             
+0     00081b8f  HAL_setupInterrupts                      
+0     00081be7  MemCfg_setLSRAMControllerSel             
+0     00081c3d  HAL_init                                 
+0     00081c90  MemCfg_getInitStatus                     
+0     00081ce3  HAL_MTR_init                             
+0     00081d2c  runSyncControl                           
+0     00081d74  SysCtl_getDeviceParametric               
+0     00081db8  MemCfg_initSections                      
+0     00081dfb  Interrupt_initModule                     
+0     00081e3c  GPIO_setPadConfig                        
+0     00081e7b  Device_init                              
+0     00081eb8  resetControlVars                         
+0     00081ef2  Interrupt_enable                         
+0     00081f28  Device_configureTMXAnalogTrim            
+0     00081f5b  GPIO_setPinConfig                        
+0     00081f8b  HAL_setParams                            
+0     00081fba  __TI_decompress_lzss                     
+0     00081fe8  HAL_enableInterrupts                     
+0     00082000  SysCtl_selectOscSource                   
+0     0008202b  XBAR_setEPWMMuxConfig                    
+0     00082056  __TI_auto_init_nobinit_nopinit           
+0     00082081  C$$EXIT                                  
+0     00082081  abort                                    
+0     00082083  exit                                     
+0     000820aa  FCL_initADC_3I                           
+0     000820d1  GPIO_setControllerCore                   
+0     000820f3  GPIO_setQualificationMode                
+0     00082115  Device_enableUnbondedGPIOPullups         
+0     00082135  GPIO_setDirectionMode                    
+0     00082155  DLOG_4CH_F_init                          
+0     00082174  Device_initGPIO                          
+0     00082192  memcpy                                   
+0     000821b0  Device_enableUnbondedGPIOPullupsFor100Pin
+0     000821cd  CLA_setTriggerSource                     
+0     000821e9  FCL_initPWM                              
+0     00082205  ramper                                   
+0     00082221  A0                                       
+0     0008223b  HAL_setupCpuTimer                        
+0     00082255  CMPSS_configFilterHigh                   
+0     0008226e  CMPSS_configFilterLow                    
+0     00082287  HAL_setupCMPSS_DACValue                  
+0     000822a0  B0                                       
+0     000822b7  C0                                       
+0     000822ce  _c_int00                                 
+0     000822e5  Interrupt_initVectorTable                
+0     000822fa  A2                                       
+0     0008230c  C1                                       
+0     0008231e  _args_main                               
+0     00082330  A3                                       
+0     0008234f  A1                                       
+0     0008235c  __TI_zero_init_nomemset                  
+0     00082369  HAL_setMotorParams                       
+0     00082375  Interrupt_defaultHandler                 
+0     00082381  Interrupt_illegalOperationHandler        
+0     0008238b  Interrupt_nmiHandler                     
+0     0008239d  FCL_initQEP                              
+0     000823a5  __TI_decompress_none                     
+0     000823ad  B1                                       
+0     000823b3  B2                                       
+0     000823b9  B3                                       
+0     000823bf  C2                                       
+0     000823c5  C3                                       
+0     000823cb  CPUTimer_setEmulationMode                
+0     000823d1  FCL_getSwVersion                         
+0     000823d3  _system_pre_init                         
+0     000823d5  _nop                                     
+0     000823d6  _system_post_cinit                       
+0     00088000  RamfuncsLoadStart                        
+0     0008839c  RamfuncsLoadEnd                          
+0     00090000  Cla1funcsLoadStart                       
+0     00090384  Cla1funcsLoadEnd                         
+0     00098084  __TI_Handler_Table_Base                  
+0     0009808a  __TI_Handler_Table_Limit                 
+0     00098092  __TI_CINIT_Base                          
+0     000980a2  __TI_CINIT_Limit                         
+0     000980a2  __TI_CINIT_Warm                          
+abs   00000000  Cla1ConstLoadSize                        
+abs   00000100  CLA_SCRATCHPAD_SIZE                      
+abs   00000380  __TI_STACK_SIZE                          
+abs   00000384  Cla1funcsLoadSize                        
+abs   0000039c  RamfuncsLoadSize                         
+abs   0000039c  RamfuncsRunSize                          
+abs   ffffffff  __TI_pprof_out_hndl                      
+abs   ffffffff  __TI_prof_data_size                      
+abs   ffffffff  __TI_prof_data_start                     
+abs   ffffffff  __c_args__                               
+
+[177 symbols]
